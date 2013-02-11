@@ -1,0 +1,1 @@
+DB_CONFIG = YAML.load_file("#{Rails.root}/config/dropbox.yml")[Rails.env]

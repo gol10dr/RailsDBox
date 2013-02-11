@@ -1,0 +1,16 @@
+ <h1>Rails Dropbox Directory</h1>
+<p>Here is a list of the current documents:</p>
+
+<% @entries['contents'].each do |child| 
+@cp = child['path']
+@cn = File.basename(@cp) %>
+<% if (child['is_dir']) then %>
+<%= image_tag("foldericon.png") %> <%= @cp.gsub!('/', '') %> - <%= link_to "Remove Folder?", delete_file_path(:id => @cn), 
+ 		:confirm => 'Delete this folder?' %>
+<hr />
+<% else %>
+<%= image_tag("fileicon.png") %> <%= link_to @cn, download_file_path(:id => @cn) %> - <%= link_to "Delete File?", delete_file_path(:id => @cn), 
+ 		:confirm => 'Delete this file?' %>
+<hr />
+<% end %>
+<% end %>

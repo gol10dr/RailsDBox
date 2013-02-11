@@ -1,0 +1,9 @@
+<%= form_tag({:controller => :dropbox, :action => :create_folder}, :method => "post") do %>
+
+  <div class="field">
+    <%= text_field_tag  :foldername, params[:foldername], :placeholder => 'New folder name' %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Create Folder" %>
+  </div>
+<% end %>

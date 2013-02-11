@@ -1,0 +1,14 @@
+<%= form_tag({:controller => :dropbox, :action => :upload}, :method => "post", :multipart => true) do |f| %>
+
+  <div class="field">
+    <%= notice %>
+  </div>
+<br />
+  <div class="field">
+    <%= label_tag "Upload file.." %><br />
+    <%= file_field_tag :myfile %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Upload" %>
+  </div>
+<% end %>

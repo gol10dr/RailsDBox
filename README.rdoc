@@ -1,0 +1,30 @@
+= Dropbox API Example - Ruby on Rails Web Application
+
+This is a Ruby on Rails web client example written simply to understand the Dropbox SDK gem and learn how to authenticate and dabble with functions of the changing Dropbox API.  This client has methods for folder creation, file upload, file listing, file download and file/folder deletion.
+
+== Requirements
+--------
+
+- Ruby 1.9.3-P374
+- Rails 3.2.11
+- Dropbox sdk gem
+       require dropbox_sdk
+- Dropbox app id
+- Dropbox app secret
+
+== Getting Started
+--------
+
+- Download source
+- replace app key in dropbox_controller.rb with your app key
+replace line 4:
+       APP_KEY = DB_CONFIG['app_key']
+with:
+       APP_KEY = 'your_app_key'
+- replace client secret in dropbox_controller.rb with your app secret
+replace line 5:
+       APP_SECRET = DB_CONFIG['app_secret']
+with:
+       APP_SECRET = 'your_app_secret'
+       
+       
